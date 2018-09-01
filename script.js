@@ -8,14 +8,14 @@ $(function(){
     }).disableSelection();
   }
 
-  // function randomString() {
-  //   var chars = '0123456789abcdefghiklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXTZ'.split();
-  //   var str = '', i;
-  //   for (i = 0; i < 10; i++) {
-  //     str += chars[Math.floor(Math.random() * chars.length)];
-  //   }
-  //   return str;
-  // }
+  function randomString() {
+    var chars = '0123456789abcdefghiklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXTZ'.split();
+    var str = '', i;
+    for (i = 0; i < 10; i++) {
+      str += chars[Math.floor(Math.random() * chars.length)];
+    }
+    return str;
+  }
 
   // KANBAN
   var board = {
@@ -27,7 +27,8 @@ $(function(){
     element: $('#board .column-container')
   };
 
-  $('.create-column').click(function(){
+  $('.create-column')
+  .click(function(){
     board.createColumn(new Column(prompt('Wpisz nazwę kolumny')));
   });
 
@@ -35,7 +36,7 @@ $(function(){
   function Column(name) {
     var self = this;
 
-    // this.id = randomString();
+    this.id = randomString();
     this.name = name;
     this.element = createColumn();
 
@@ -117,5 +118,4 @@ $(function(){
   // DODAWANIE KART DO KOLUMN
   todoColumn.createCard(card1);
   doingColumn.createCard(card2);
-});
-
+})

@@ -1,9 +1,39 @@
-body {margin: 0;}
-* {box-sizing: border-box;}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: azure;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  color: coral;
+  text-transform: uppercase;
+}
+
+button {
+  border: none;
+  width: 130px;
+  height: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 20px 10px;
+  
+  border-radius: 4px;
+  color: #fff;
+}
+
+button.create-column {
+  background-color: rgb(66, 163, 10);
+}
 
 .ui-sortable {
   min-height: 80px;
 }
+
 .btn-delete {
   position: absolute;
   right: 0;
@@ -11,55 +41,79 @@ body {margin: 0;}
   width: 22px;
   height: 22px;
   border: 0;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0, 0, 0, 0.4);
+  background-color: crimson;
   color: white;
 }
+
 /* BOARD */
 .board h1 {
   margin-left: 8px;
 }
+
 .column-container {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
 }
 
-
 /* COLUMN */
 .column {
   order: 1;
   min-width: 300px;
   min-height: 50vh;
+  text-transform: uppercase;
   background-color: lightgrey;
   margin-left: 8px;
   list-style: none;
   position: relative;
+  background-color: beige;
+  -webkit-box-shadow: 1px 1px 3px 1px #bebeaa;
+  box-shadow: 1px 1px 3px 1px #bebeaa;
 }
+
 .column-add-card {
   cursor: pointer;
   text-decoration: underline;
-  margin: 5px 8px;
+  width: 120px;
+  margin: 10px;
   display: block;
 }
 
-/* STYLE KARTY */
+button.column-add-card {
+  background-color: rgb(185, 104, 12);
+}
+
+h2.column-title {
+  padding: 0 20px;
+  color: rgb(49, 42, 146);
+}
+
+/* CARD STYLE */
 .card {
   box-sizing: border-box;
   display: block;
   height: 60px;
+  font-size: 14px;
   margin-bottom: 5px;
-  padding: 4px;
+  padding: 5px;
   overflow: hidden;
   position: relative;
+  background-color: yellow;
+  -webkit-box-shadow: 1px 1px 10px 2px #dcdbb9;
+  box-shadow: 1px 1px 10px 2px #dcdbb9;
 }
+
 .card-list {
   list-style: none;
   margin: 5px;
   padding: 0px;
 }
+
 .card-description {
   margin: 2px 0;
 }
+
 .card-placeholder {
   box-sizing: border-box;
   display: block;

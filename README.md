@@ -1,4 +1,4 @@
-# KANBAN
+# KANBAN pro
 
 ## AJAX training
 
